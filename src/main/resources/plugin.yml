@@ -1,0 +1,5 @@
+name: ActionGate
+version: 1.0.0-SNAPSHOT
+main: me.andia.actiongate.ActionGatePlugin
+api-version: '26.2'
+description: A Paper plugin project scaffold.
