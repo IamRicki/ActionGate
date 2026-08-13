@@ -1,0 +1,12 @@
+restricted-blocks:
+  DIAMOND_ORE:
+    permission: "actiongate.mine.diamond"
+    message: "&cYou don't have permission to mine Diamond Ore."
+
+  DEEPSLATE_DIAMOND_ORE:
+    permission: "actiongate.mine.diamond"
+    message: "&cYou don't have permission to mine Diamond Ore."
+
+  ANCIENT_DEBRIS:
+    permission: "actiongate.mine.ancient_debris"
+    message: "&cYou don't have permission to mine Ancient Debris."

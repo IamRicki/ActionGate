@@ -1,5 +1,6 @@
 plugins {
     java
+    id("xyz.jpenilla.run-paper") version "3.1.0"
 }
 
 group = "me.andia.actiongate"
@@ -22,4 +23,8 @@ java {
 
 tasks.withType<JavaCompile>().configureEach {
     options.encoding = "UTF-8"
+}
+
+tasks.runServer {
+    minecraftVersion("26.2")
 }
