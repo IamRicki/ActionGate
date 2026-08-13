@@ -1,12 +1,104 @@
-restricted-blocks:
-  DIAMOND_ORE:
-    permission: "actiongate.mine.diamond"
-    message: "&cYou don't have permission to mine Diamond Ore."
+# ActionGate 1.0 default configuration
+#
+# This bundled file is copied to plugins/ActionGate/config.yml on first start.
+# Edit the runtime file, then use /actiongate reload to apply changes.
+# Material and entity names use their Bukkit enum names (for example DIAMOND_ORE).
+# Use worlds: ["*"] for every world, or list exact world folder names.
 
-  DEEPSLATE_DIAMOND_ORE:
+rules:
+  diamond-mining:
+    enabled: true
+    action: BLOCK_BREAK
+    targets:
+      - DIAMOND_ORE
+      - DEEPSLATE_DIAMOND_ORE
     permission: "actiongate.mine.diamond"
-    message: "&cYou don't have permission to mine Diamond Ore."
+    message: "&cYou need permission &e{permission} &cto mine Diamond Ore."
+    worlds:
+      - "*"
 
-  ANCIENT_DEBRIS:
+  gold-mining:
+    enabled: true
+    action: BLOCK_BREAK
+    targets:
+      - GOLD_ORE
+      - DEEPSLATE_GOLD_ORE
+      - NETHER_GOLD_ORE
+    permission: "actiongate.mine.gold"
+    message: "&cYou need the Miner role to mine Gold Ore."
+    worlds:
+      - "*"
+
+  ancient-debris-mining:
+    enabled: true
+    action: BLOCK_BREAK
+    targets:
+      - ANCIENT_DEBRIS
     permission: "actiongate.mine.ancient_debris"
     message: "&cYou don't have permission to mine Ancient Debris."
+    worlds:
+      - "*"
+
+  fishing:
+    enabled: true
+    action: FISH
+    permission: "actiongate.action.fishing"
+    message: "&cYou need the Fisherman role to fish."
+    worlds:
+      - "*"
+
+  elytra:
+    enabled: true
+    action: ELYTRA
+    permission: "actiongate.action.elytra"
+    message: "&cYou are not allowed to use an Elytra."
+    worlds:
+      - "*"
+
+  nether-access:
+    enabled: true
+    action: PORTAL
+    targets:
+      - NETHER
+    permission: "actiongate.portal.nether"
+    message: "&cYou must reach the required rank before entering the Nether."
+    worlds:
+      - "*"
+
+  enchanting-table-use:
+    enabled: true
+    action: INTERACT_BLOCK
+    targets:
+      - ENCHANTING_TABLE
+    permission: "actiongate.interact.enchanting_table"
+    message: "&cYou are not allowed to use an Enchanting Table."
+    worlds:
+      - "*"
+
+  tnt-placement:
+    enabled: true
+    action: BLOCK_PLACE
+    targets:
+      - TNT
+    permission: "actiongate.place.tnt"
+    message: "&cYou are not allowed to place TNT."
+    worlds:
+      - "*"
+
+  diamond-sword-crafting:
+    enabled: true
+    action: CRAFT
+    targets:
+      - DIAMOND_SWORD
+    permission: "actiongate.craft.diamond_sword"
+    message: "&cYou are not allowed to craft a Diamond Sword."
+    worlds:
+      - "*"
+
+  pvp:
+    enabled: true
+    action: ATTACK_PLAYER
+    permission: "actiongate.combat.pvp"
+    message: "&cYou are not allowed to attack players."
+    worlds:
+      - "*"

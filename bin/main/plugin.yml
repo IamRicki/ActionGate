@@ -1,14 +1,18 @@
 name: ActionGate
-version: 1.0.0-SNAPSHOT
+version: 1.0.0
 main: me.andia.actiongate.ActionGatePlugin
 api-version: '26.2'
-description: A Paper plugin project scaffold.
+description: Configurable gameplay restrictions powered by Bukkit permissions.
 commands:
   actiongate:
-    description: ActionGate administration command.
-    usage: /actiongate reload
+    description: View and administer ActionGate.
+    usage: /actiongate
+    aliases: [ag]
     permission: actiongate.admin
 permissions:
   actiongate.admin:
-    description: Allows reloading the ActionGate configuration.
+    description: Allows use of ActionGate administration commands and GUI.
     default: op
+  actiongate.bypass:
+    description: Bypasses every ActionGate gameplay restriction.
+    default: false
